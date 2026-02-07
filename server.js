@@ -5,7 +5,7 @@ import express from "express";
 const app = express();
 
 app.use(cors({
-  origin: ["https://backend-kxr2.onrender.com"],
+  origin: ["https://smart-note-40d2.onrender.com"],
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type"],
 }));
@@ -38,4 +38,5 @@ app.post("/create-order", async (req, res) => {
 app.listen(5050, () =>
   console.log("https://backend-kxr2.onrender.com")
 );
+
 
