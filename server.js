@@ -5,16 +5,14 @@ import express from "express";
 const app = express();
 
 app.use(cors({
-  origin: ["http://127.0.0.1:5500", "http://localhost:5500"],
+  origin: ["https://backend-kxr2.onrender.com"],
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type"],
 }));
 
 app.use(express.json());
 
-const razorpay = new Razorpay({
-  key_id: "rzp_test_S7yra6spfeeO7h",
-      key_secret: "v7CFWcdMu8ndbcsMCY6PHvuN" // 🔒 NEVER expose this in frontend
+const razorpay = new Razorpay({// 🔒 NEVER expose this in frontend
 });
 
 app.post("/create-order", async (req, res) => {
@@ -38,5 +36,6 @@ app.post("/create-order", async (req, res) => {
   }
 });
 app.listen(5050, () =>
-  console.log("Server running on port 5050")
+  console.log("https://backend-kxr2.onrender.com")
 );
+
